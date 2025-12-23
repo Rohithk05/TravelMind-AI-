@@ -1,0 +1,32 @@
+.sus-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+}
+
+.swap-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+    .sus-grid {
+        grid-template-columns: 1fr;
+    }
+}

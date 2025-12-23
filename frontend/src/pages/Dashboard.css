@@ -1,0 +1,150 @@
+/* Dashboard.css */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+}
+
+.col-main {
+    grid-column: span 8;
+}
+
+.col-side {
+    grid-column: span 4;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+    color: var(--primary-500);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.view-toggle {
+    background: white;
+    padding: 0.25rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    display: flex;
+    gap: 0.25rem;
+}
+
+.toggle-btn {
+    padding: 0.5rem 1rem;
+    border-radius: calc(var(--radius-md) - 2px);
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+    color: var(--primary-500);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toggle-btn.active {
+    background: var(--primary-900);
+    color: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.metrics-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.metric-card {
+    background: white;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-500);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary-900);
+    line-height: 1;
+}
+
+.metric-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metric-icon.blue {
+    background: var(--brand-50);
+    color: var(--brand-600);
+}
+
+.metric-icon.green {
+    background: #ecfdf5;
+    color: var(--success);
+}
+
+/* Intel Card */
+.intel-card {
+    background: linear-gradient(145deg, var(--primary-900), var(--primary-800));
+    color: white;
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.intel-glow {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: var(--brand-500);
+    filter: blur(80px);
+    opacity: 0.3;
+    border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-main,
+    .col-side {
+        width: 100%;
+    }
+}

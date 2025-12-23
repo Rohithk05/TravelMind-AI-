@@ -1,0 +1,18 @@
+/* VirtualTour.css */
+.virtual-tour-page {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-player-container {
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+}
+
+.aspect-video {
+    aspect-ratio: 16 / 9;
+}

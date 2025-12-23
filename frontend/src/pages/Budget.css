@@ -1,0 +1,67 @@
+.budget-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.stat-card .icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-card .label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.stat-card .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.budget-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.col-span-2 {
+    grid-column: span 2;
+}
+
+.col-span-3 {
+    grid-column: span 3;
+}
+
+.categories-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+@media (max-width: 1024px) {
+    .budget-stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .budget-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .col-span-2,
+    .col-span-3 {
+        grid-column: span 1;
+    }
+}

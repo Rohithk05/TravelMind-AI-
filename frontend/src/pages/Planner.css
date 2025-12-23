@@ -1,0 +1,219 @@
+/* Result Hero */
+.result-hero {
+    position: relative;
+    height: 65vh;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: -100px;
+    /* Pull content up */
+}
+
+/* Planner.css */
+.planner-page {
+    position: relative;
+}
+
+.hero-section {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-line {
+    position: absolute;
+    left: 24px;
+    top: 40px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary-light) 0%, rgba(226, 232, 240, 0) 100%);
+    z-index: 0;
+}
+
+.day-header-sticky {
+    position: sticky;
+    top: 80px;
+    /* Offset for main header */
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+}
+
+.activity-card {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+.time-badge {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--secondary);
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 4px 0;
+    z-index: 2;
+}
+
+.planner-input-panel {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Timeline Connector */
+.activity-card::before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 25px;
+    width: 12px;
+    height: 2px;
+    background: #e2e8f0;
+}
+
+.ai-pill {
+    background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 100px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(14, 165, 233, 0.3);
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.hero-badges {
+    display: flex;
+    align-items: center;
+}
+
+.glass-badge {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-white {
+    background: white;
+    color: var(--text-primary);
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.btn-white:hover {
+    background: var(--primary-light);
+}
+
+.planner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 20;
+}
+
+.planner-form-container {
+    max-width: 800px;
+    margin: 6rem auto 0;
+}
+
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon svg {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.input-with-icon input,
+.input-with-icon select {
+    width: 100%;
+    padding-left: 3rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    transition: all 0.2s;
+}
+
+.input-with-icon input:focus,
+.input-with-icon select:focus {
+    background: white;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--primary-light);
+    outline: none;
+}
+
+/* Timeline Polish */
+.events-stack:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+}

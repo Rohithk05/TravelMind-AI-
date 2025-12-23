@@ -1,0 +1,41 @@
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.review-item {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-item.fake {
+    background-color: #fef2f2;
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    border: 1px solid #fee2e2;
+}
+
+.badge-danger {
+    background: var(--danger);
+    color: white;
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: var(--border-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar .fill {
+    height: 100%;
+    border-radius: 4px;
+}

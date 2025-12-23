@@ -1,0 +1,24 @@
+/* App Container */
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Scrollbar Styling for Webkit */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-200, #cbd5e1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-300, #94a3b8);
+}
