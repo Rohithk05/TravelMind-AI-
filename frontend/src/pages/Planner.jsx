@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTrip } from '../context/TripContext';
 import config from '../config';
-import { Calendar, DollarSign, MapPin, Heart, Sparkles, Loader2, ChevronDown, ChevronUp, Clock } from 'lucide-react';
+import { Calendar, DollarSign, MapPin, Heart, Sparkles, Loader2, ChevronDown, ChevronUp, Clock, Zap, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './Planner.css';
 
