@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useTrip } from '../context/TripContext';
+import { useAuth } from '../context/AuthContext';
 import config from '../config';
-import { Calendar, DollarSign, MapPin, Heart, Sparkles, Loader2, ChevronDown, ChevronUp, Clock, Zap, Users } from 'lucide-react';
+import { Calendar, DollarSign, MapPin, Heart, Sparkles, Loader2, ChevronDown, ChevronUp, Clock, Zap, Users, RefreshCw } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './Planner.css';
 
@@ -10,6 +11,7 @@ const INTERESTS = ['Nature', 'History', 'Food', 'Adventure', 'Relaxation', 'Shop
 // MOCK REMOVED
 export default function Planner() {
     const { activeTrip, addTrip } = useTrip();
+    const { token } = useAuth();
 
     // States: 'input' | 'generating' | 'view'
     // If activeTrip exists, default to 'view', else 'input'
@@ -83,7 +85,10 @@ export default function Planner() {
             // Real API Call
             const response = await fetch(config.endpoints.ai.plan, { // Replaced hardcoded URL with config
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
                 body: JSON.stringify({
                     ...formData,
                     destination: dest
@@ -329,7 +334,7 @@ export default function Planner() {
 
                 {!itinerary?.days || itinerary.days.length === 0 ? (
                     <div className="text-center py-20 bg-white rounded-3xl border border-dashed border-slate-200">
-                        <Loader className="mx-auto text-slate-300 mb-4 animate-spin" size={40} />
+                        <Loader2 className="mx-auto text-slate-300 mb-4 animate-spin" size={40} />
                         <h3 className="text-xl font-bold text-slate-400">Processing Your Itinerary...</h3>
                     </div>
                 ) : (

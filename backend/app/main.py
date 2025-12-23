@@ -34,6 +34,7 @@ app.add_middleware(
 )
 
 @app.get("/")
+@app.get("/api/")
 async def health_check():
     return {"status": "active", "system": "TravelMind AI Core"}
 
