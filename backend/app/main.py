@@ -10,11 +10,12 @@ app = FastAPI(
     version="1.0.0"
 )
 
+
 # Initialize database on startup
-@app.on_event("startup")
-async def startup_event():
-    init_db()
-    print("✅ Database initialized successfully")
+# @app.on_event("startup")
+# async def startup_event():
+#     init_db()
+#     print("✅ Database initialized successfully")
 
 # CORS Configuration
 origins = [
